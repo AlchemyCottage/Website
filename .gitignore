@@ -1,0 +1,53 @@
+#WordPress configuration file and its template file
+wp-config.php
+wp-config-sample.php
+
+#Apache / PHP server configuration files
+/.htaccess
+.htaccess
+.user.ini
+php.ini
+
+#Wordpress core files
+#wp-admin/
+#wp-includes/
+
+#Log files
+*.log
+error_log
+
+#Dynamic files and directories
+/wp-content/cache/
+/wp-content/*-cache.php
+/wp-content/languages/
+/wp-content/uploads/
+/wp-content/upgrade/
+
+#Dynamic files and directories (plugin-specific samples)
+/wp-content/ewww/
+/wp-content/db.php
+/wp-content/autoptimize_404_handler.php
+/wp-content/wp-cloudflare-super-page-cache/
+/wp-content/wpo-cache/
+/wp-content/ai1wm-backups/
+wp-content/.maintenance
+
+#File-system specific files
+.DS_Store
+Thumbs.db
+
+.env
+*.sql
+*.tar.gz
+*.zip
+*.bak
+*.swp
+*-bak
+
+# Plugin-specific files
+#wp-content/plugins/*/readme.txt
+
+# Backup files (e.g., from backup plugins)
+/wp-content/backups/
+/wp-content/uploads/wp-backup/
+wp-content/updraft/

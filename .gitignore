@@ -20,7 +20,7 @@ error_log
 /wp-content/cache/
 /wp-content/*-cache.php
 /wp-content/languages/
-/wp-content/uploads/
+#/wp-content/uploads/
 /wp-content/upgrade/
 
 #Dynamic files and directories (plugin-specific samples)

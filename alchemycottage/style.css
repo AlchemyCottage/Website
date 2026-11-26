@@ -1,0 +1,905 @@
+/*
+Theme Name: AlchemyCottage
+Text Domain: AlchemyCottage
+Version: 1.0
+Description: A bakery template.
+Tags: bakery, recipes
+Author: Alchemy Cottage & Electric-i, LLC
+Author URI: https://github.com/AlchemyCottage
+*/
+
+
+.electric-link {
+  color: #0f5132;
+}
+
+.electric-link:hover {
+	color: #0a3622;
+}
+
+
+@media (max-width: 326px) {
+  .powered-by {
+    display: block;
+  }
+}
+
+
+
+.site-title {
+    color: inherit;
+    font-family: Georgia, serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 600;
+}
+
+.site-description {
+    color: #777;
+}
+
+
+.bakery-hero .carousel-item {
+  height: 520px;
+  background: #4b3025;
+}
+
+.bakery-hero .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.65;
+}
+
+.bakery-hero .carousel-caption {
+  bottom: 20%;
+}
+
+.bakery-hero .carousel-caption h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+.home-section {
+  padding: 4rem 0;
+}
+
+
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+}
+
+.site-nav > li {
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav a {
+  display: block;
+  padding: 0.5rem 0;
+  /* color: #a3a0a0; */
+/*  color: #505050;*/
+  color: rgba(255,255,255,.5);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.site-nav a:hover,
+.site-nav .current-menu-item > a,
+.site-nav .current_page_item > a {
+/*  color: #e1e9f1;*/
+  color: #343a40;
+}
+
+/* Originally 767px & 567px*/
+@media (max-width: 359px) {
+  .site-nav {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
+
+/* This is to prevent the hamburger from appearing at around 560px, and to change it at 359px instead */
+@media (min-width: 360px) {
+  .navbar.navbar-expand-sm {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+
+  .navbar-expand-sm .navbar-nav {
+    flex-direction: row;
+  }
+
+  .navbar-expand-sm .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
+
+  .navbar-expand-sm .navbar-toggler {
+    display: none;
+  }
+}
+
+
+
+
+
+
+.logo
+{
+  width: 42px ;
+  height: auto ;
+}
+
+
+.product-img img {
+  display: block;
+  max-width: 100%;
+  height: 100%;
+  border-radius: 0.375rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+
+
+
+
+
+.cottage-add-to-cart form.cart .quantity .qty {
+  width: 120px !important;
+  min-height: 38px !important;
+  padding: 6px 12px !important;
+  border: 1px solid #ced4da !important;
+  border-radius: 4px !important;
+  background: #fff !important;
+  color: #212529 !important;
+  font: inherit !important;
+}
+
+.cottage-add-to-cart form.cart button.single_add_to_cart_button {
+  display: block !important;
+  width: 100% !important;
+  padding: 8px 18px !important;
+  border: 1px solid #212529 !important;
+  border-radius: 5px !important;
+  /* background: #343a40 !important; */
+  background: linear-gradient(to bottom, #f8f5f5 0%, #f3ebe3 60%, #f3dbc4 100%) !important ;
+  color: #1b1b1b !important;
+  font: inherit !important;
+  font-size: 1.25rem !important;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+.cottage-add-to-cart form.cart button.single_add_to_cart_button:hover {
+  /*background: #1a1e21 !important;
+  color: #fff !important;*/
+  background: linear-gradient(to bottom, #f3dbc4 0%, #f3ebe3 60%, #ffffff 100%) !important;
+  color: #464545 !important;
+}
+
+
+.cottage-order-lookup .woocommerce form.track_order button {
+  padding: 0.6rem 1rem;
+  border: 1px solid #343a40;
+  border-radius: 0.25rem;
+  background: linear-gradient(to bottom, #f8f5f5 0%, #f3ebe3 60%, #f3dbc4 100%) !important;
+  color: #464545 !important;
+}
+
+.cottage-order-lookup .woocommerce form.track_order button:hover {
+  /*background: #1a1e21 !important;
+  color: #fff !important;*/
+  background: linear-gradient(to bottom, #f3dbc4 0%, #f3ebe3 60%, #ffffff 100%) !important;
+  color: #464545 !important;
+}
+
+
+
+.recipe-category-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.75rem;
+}
+
+.recipe-category-buttons .category-button {
+  width: 100%;
+  min-height: 48px;
+  white-space: normal;
+}
+
+.recipe-category-buttons .category-button.is-active {
+/*  color: #fff;
+  background-color: #343a40;
+  border-color: #343a40;
+*/
+  color: #343a40;
+  background-color: #343a40;
+  border-color: #5f6b75;
+  border-width: medium;
+}
+
+
+
+.shop-category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.66rem;
+}
+
+.shop-category-buttons .shop-category {
+  white-space: normal;
+}
+.shop-category-buttons .active
+{
+  color: #343a40 !important; 
+  background-color: #343a40 !important;
+  border-color: #5f6b75 !important;
+  border-width: medium;
+
+}
+
+
+
+
+#calc_shipping_state_field span {
+    width: 100% !important;
+}
+
+#calc_shipping_state_field .select2-container {
+    width: 100% !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cottage-cart {
+  background-color: #fff;
+}
+
+.cottage-cart .cart-title {
+  color: #493329;
+  font-family: Georgia, serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 600;
+}
+
+.cottage-cart .woocommerce table.shop_table {
+  width: 100%;
+  border: 1px solid #dee2e6;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.cottage-cart .woocommerce table.shop_table th,
+.cottage-cart .woocommerce table.shop_table td {
+  padding: 0.9rem;
+  border: 1px solid #dee2e6;
+  vertical-align: middle;
+}
+
+.cottage-cart .woocommerce .cart-collaterals .cart_totals {
+  float: none;
+  width: 100%;
+  max-width: 520px;
+  margin: 2rem 0 0 auto;
+  padding: 1.5rem;
+  border: 1px solid #dee2e6;
+  border-radius: 0.375rem;
+  background: #f8f9fa;
+}
+
+.cottage-cart .woocommerce a.button,
+.cottage-cart .woocommerce button.button,
+.cottage-cart .woocommerce input.button {
+  padding: 0.6rem 1rem;
+  border: 1px solid #343a40;
+  border-radius: 0.25rem;
+  /*background: #343a40;*/
+  background: linear-gradient(to bottom, #f8f5f5 0%, #f3ebe3 60%, #f3dbc4 100%);
+  color: #464545;
+}
+
+.cottage-cart .woocommerce a.button:hover,
+.cottage-cart .woocommerce button.button:hover,
+.cottage-cart .woocommerce input.button:hover {
+  /*background: #1a1e21;*/
+  background: linear-gradient(to bottom, #f3dbc4 0%, #f3ebe3 60%, #ffffff 100%);
+  color: #464545;
+}
+
+.cottage-cart .woocommerce input.input-text {
+  min-height: 38px;
+  padding: 0.375rem 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+@media (max-width: 576px) {
+  .cottage-cart .woocommerce table.shop_table th,
+  .cottage-cart .woocommerce table.shop_table td {
+    padding: 0.5rem;
+  }
+}
+
+
+.cottage-cart .woocommerce .cart-collaterals .cart_totals {
+  float: none;
+  width: 100%;
+  max-width: 100% !important; 
+  margin: 2rem 0 0 auto;
+  padding: 1.5rem;
+  border: 1px solid #dee2e6;
+  border-radius: 0.375rem;
+  background: #f8f9fa;
+}
+
+
+
+
+
+
+
+
+
+.cottage-checkout .checkout-title {
+  color: #493329;
+  font-family: Georgia, serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 600;
+}
+
+.cottage-checkout form.checkout,
+.cottage-checkout #order_review {
+  padding: 1.5rem;
+  border: 1px solid #dee2e6;
+  border-radius: 0.375rem;
+  background: #fff;
+}
+
+.cottage-checkout .woocommerce form .form-row input.input-text,
+.cottage-checkout .woocommerce form .form-row textarea,
+.cottage-checkout .woocommerce form .form-row select {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 38px;
+  padding: 0.375rem 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+.cottage-checkout .woocommerce #place_order {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #343a40;
+  border-radius: 0.25rem;
+  /*background: #343a40;
+  color: #fff;
+  */
+  background: linear-gradient(to bottom, #f8f5f5 0%, #f3ebe3 60%, #f3dbc4 100%);
+  color: #464545;
+  font-size: 1.1rem;
+}
+
+.cottage-checkout .woocommerce #place_order:hover {
+  /*background: #1a1e21;*/
+  background: linear-gradient(to bottom, #f3dbc4 0%, #f3ebe3 60%, #f8f5f5 100%);
+  color: #464545
+}
+
+@media (max-width: 576px) {
+  .cottage-checkout form.checkout,
+  .cottage-checkout #order_review {
+    padding: 1rem;
+  }
+}
+
+
+.cottage-checkout .woocommerce form.checkout .form-row {
+  float: none !important;
+  clear: both !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.cottage-checkout .woocommerce form.checkout .form-row input.input-text,
+.cottage-checkout .woocommerce form.checkout .form-row textarea,
+.cottage-checkout .woocommerce form.checkout .form-row select {
+  display: block !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Prevent Bootstrap's .col-1 / .col-2 widths shrinking WooCommerce columns */
+.cottage-checkout .woocommerce .col2-set .col-1,
+.cottage-checkout .woocommerce .col2-set .col-2 {
+  float: none !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* Full-width, consistently spaced checkout fields */
+.cottage-checkout .woocommerce form.checkout .form-row {
+  float: none !important;
+  clear: both;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 0 1rem;
+}
+
+.cottage-checkout .woocommerce form.checkout .form-row input.input-text,
+.cottage-checkout .woocommerce form.checkout .form-row textarea,
+.cottage-checkout .woocommerce form.checkout .form-row select,
+.cottage-checkout .woocommerce form.checkout .select2-container {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.cottage-checkout .woocommerce form.checkout .form-row input.input-text,
+.cottage-checkout .woocommerce form.checkout .form-row textarea,
+.cottage-checkout .woocommerce form.checkout .form-row select {
+  min-height: 42px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+
+
+/* Full-width WooCommerce checkout fields */
+.woocommerce-checkout .woocommerce form.checkout p.form-row,
+.woocommerce-checkout .woocommerce form.checkout p.form-row-first,
+.woocommerce-checkout .woocommerce form.checkout p.form-row-last,
+.woocommerce-checkout .woocommerce form.checkout p.form-row-wide {
+  float: none !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.woocommerce-checkout .woocommerce form.checkout .woocommerce-input-wrapper {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.woocommerce-checkout .woocommerce form.checkout .woocommerce-input-wrapper input.input-text,
+.woocommerce-checkout .woocommerce form.checkout .woocommerce-input-wrapper select,
+.woocommerce-checkout .woocommerce form.checkout .woocommerce-input-wrapper textarea {
+  display: block !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+
+
+/* Expand WooCommerce's checkout columns despite Bootstrap .col-* rules */
+.woocommerce-checkout .woocommerce .col2-set > .col-1,
+.woocommerce-checkout .woocommerce .col2-set > .col-2 {
+  flex: 0 0 100% !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Expand each field row and its input */
+.woocommerce-checkout .woocommerce form.checkout .form-row,
+.woocommerce-checkout .woocommerce form.checkout .form-row-first,
+.woocommerce-checkout .woocommerce form.checkout .form-row-last,
+.woocommerce-checkout .woocommerce form.checkout .form-row-wide {
+  float: none !important;
+  flex: 0 0 100% !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.woocommerce-checkout .woocommerce-input-wrapper,
+.woocommerce-checkout .woocommerce-input-wrapper input,
+.woocommerce-checkout .woocommerce-input-wrapper select,
+.woocommerce-checkout .woocommerce-input-wrapper textarea {
+  display: block !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.woocommerce-thankyou-order-received {
+  color: #6c757d !important; /* Bootstrap 4 text-muted */
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+/* Tracking orders as a customer */
+.cottage-order-lookup .order-lookup-title {
+  color: #493329;
+  font-family: Georgia, serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 600;
+}
+
+.cottage-order-lookup .woocommerce form.track_order {
+  padding: 1.5rem;
+  border: 1px solid #dee2e6;
+  border-radius: 0.375rem;
+  background: #fff;
+}
+
+.cottage-order-lookup .woocommerce form.track_order input.input-text {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 42px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+.cottage-order-lookup .woocommerce form.track_order button {
+  padding: 0.6rem 1rem;
+  border: 1px solid #343a40;
+  border-radius: 0.25rem;
+  background: #343a40;
+  color: #fff;
+}
+
+
+
+
+
+
+
+.footer-navigation li {
+  margin: 0 0.5rem;
+}
+
+.footer-navigation a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-navigation a:hover,
+.footer-navigation a:focus {
+  text-decoration: underline;
+}
+
+@media (min-width: 259px) and (max-width: 270px) {
+  .footer-navigation ul > li {
+    flex: 0 0 50%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 271px) and (max-width: 438px) {
+  .footer-navigation ul > li {
+    flex: 0 0 50%;
+    box-sizing: border-box;
+    margin: 0;
+    text-align: center;
+  }
+}
+/*
+@media (min-width: 271px) and (max-width: 438px) {
+  .footer-navigation ul {
+    display: grid !important;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+    justify-items: center;
+    column-gap: 1rem;
+  }
+
+  .footer-navigation ul > li {
+    margin: 0;
+  }
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Recipe grid layout */
+.recipe-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.recipe-item {
+  display: flex;
+  min-width: 0;
+}
+
+.recipe-item > .recipe-card {
+  width: 100%;
+}
+
+.recipe-grid-message {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin: 0;
+}
+
+/* Phone: single card, centered only when it is alone */
+.recipe-grid .is-center {
+  justify-self: center;
+  width: min(100%, 420px);
+}
+
+/* Tablet: two columns, a lone last card is centered */
+@media (min-width: 768px) {
+  .recipe-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .recipe-grid .is-center {
+    grid-column: 1 / -1;
+    width: calc(50% - 0.75rem);
+    justify-self: center;
+  }
+}
+
+/* Desktop: three columns, with spacing rules for short last rows */
+@media (min-width: 992px) {
+  .recipe-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .recipe-grid .is-center {
+    grid-column: 2;
+    width: 100%;
+  }
+
+  .recipe-grid .is-spread-left {
+    grid-column: 1;
+  }
+
+  .recipe-grid .is-spread-right {
+    grid-column: 3;
+  }
+}
+
+
+
+
+/* Shop product grid layout */
+.shop-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.shop-item {
+  display: flex;
+  min-width: 0;
+}
+
+.shop-item > .shop-product {
+  width: 100%;
+}
+
+/* Phone: single card, centered only when it is alone */
+.shop-grid .is-center {
+  justify-self: center;
+  width: min(100%, 420px);
+}
+
+/* Tablet: two columns, a lone last card is centered */
+@media (min-width: 768px) {
+  .shop-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .shop-grid .is-center {
+    grid-column: 1 / -1;
+    width: calc(50% - 0.75rem);
+    justify-self: center;
+  }
+}
+
+/* Desktop: three columns, with spacing rules for short last rows */
+@media (min-width: 992px) {
+  .shop-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .shop-grid .is-center {
+    grid-column: 2;
+    width: 100%;
+  }
+
+  .shop-grid .is-spread-left {
+    grid-column: 1;
+  }
+
+  .shop-grid .is-spread-right {
+    grid-column: 3;
+  }
+}
+
+.shop-grid-message {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+
+
+
+
+
+
+/* Header logo band: square logo scales by height, sides fill with white */
+/* Fixed-height band, logo drawn larger and cropped top and bottom */
+.site-brand {
+  display: block;
+  height: clamp(120px, 15vw, 150px);
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto clamp(220px, 28vw, 260px);
+}
+
+
+
+.site-brand-wrap {
+  background: linear-gradient(to bottom, #c9a88a 0%, #f3ebe3 60%, #ffffff 100%);
+}
+.site-brand-wrap-reverse {
+  background: linear-gradient(to bottom, #ffffff 0%, #f3ebe3 60%, #c9a88a 100%);
+}
+.site-brand-wrap-soft {
+  background: linear-gradient(to bottom, #f3dbc4 0%, #f3ebe3 60%, #ffffff 100%);
+}
+
+.site-brand-wrap-soft-reverse {
+  background: linear-gradient(to bottom, #f8f5f5 0%, #f3ebe3 60%, #f3dbc4 100%);
+}
+.site-brand-wrap-soft-shop {
+  background: linear-gradient(to bottom, #fdf4f4 0%, #f3ebe3 60%, #ffffff 100%);
+}
+.site-brand-wrap-soft-shop-reverse {
+  background: linear-gradient(to bottom, #ffffff 0%, #f3ebe3 60%, #fdf4f4 100%);
+}
+
+
+.site-background-soft {
+  background: linear-gradient(to bottom, #f3dbc4 0%, #f3ebe3 60%, #f3dbc4 100%);
+}
+
+
+/* Pot */
+.site-brand-wrap-green {
+  background: linear-gradient(to bottom, #2f4a3a 0%, #dfe8dc 60%, #ffffff 100%);
+}
+.site-brand-wrap-green-reverse {
+  background: linear-gradient(to bottom, #ffffff 0%, #dfe8dc 60%, #2f4a3a 100%);
+}
+.site-brand-wrap-soft-green {
+  background: linear-gradient(to bottom, #8fa58a 0%, #f3ebe3 60%, #ffffff 100%);
+}
+.site-brand-wrap-soft-green-reverse {
+  background: linear-gradient(to bottom, #f8f5f5 0%, #f3ebe3 60%, #8fa58a 100%);
+}
+.site-background-soft-green {
+  background: linear-gradient(to bottom, #8fa58a 0%, #f3ebe3 60%, #8fa58a 100%);
+}
+
+.site-brand-wrap-green-footer {
+  background: linear-gradient(to bottom, #2f4a3a 0%, #8fa58a 60%, #dfe8dc 100%);
+}
+.site-brand-wrap-green-header {
+  background: linear-gradient(to bottom, #2f4a3a 0%, #8fa58a 50%, #2f4a3a 100%);
+}
+
+
+
+
+
+
+
+.cottage-food-section {
+  background-color: #f8f9fa;
+  background-image: url('') ;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.cottage-food-panel {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.93);
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 576px) {
+  .cottage-food-panel {
+    padding: 1.25rem;
+  }
+}
+
+
+
+.about-hero {
+  background-image: url('assets/images/us-flag.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.about-hero-panel {
+  background: rgba(255, 255, 255, 0.93);
+}
+
+
+
+
+
+
+.map-embed {
+  display: block;
+  width: 100%;
+  height: clamp(250px, 40vw, 450px);
+  border: 1px solid black;
+  border-radius: 0.25rem;
+}
+
+
+
+
+
+.btn:not(:disabled):not(.disabled):not(.carousel-caption .btn):hover {
+  background: linear-gradient(to bottom, #f3dbc4 0%, #f3ebe3 60%, #ffffff 100%);
+  color: #464545;
+}

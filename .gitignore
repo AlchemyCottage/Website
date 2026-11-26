@@ -9,8 +9,8 @@ wp-config-sample.php
 php.ini
 
 #Wordpress core files
-#wp-admin/
-#wp-includes/
+wp-admin/
+wp-includes/
 
 #Log files
 *.log
@@ -37,6 +37,7 @@ wp-content/.maintenance
 Thumbs.db
 
 .env
+.env.*
 *.sql
 *.tar.gz
 *.zip
